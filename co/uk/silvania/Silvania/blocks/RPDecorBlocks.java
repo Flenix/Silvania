@@ -12,10 +12,10 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 
-public class StainedWood extends Block {
+public class RPDecorBlocks extends Block {
 
-	public StainedWood(int id) {
-		super(id, Material.wood);
+	public RPDecorBlocks(int id) {
+		super(id, Material.rock);
 		this.setCreativeTab(Silvania.tabSilvania);
 	}
 	
@@ -24,7 +24,7 @@ public class StainedWood extends Block {
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
-		icons = new Icon[16];
+		icons = new Icon[10];
 		
 		for(int i = 0; i < icons.length; i++) {
 			icons[i] = iconRegister.registerIcon("Silvania:" + (this.getUnlocalizedName().substring(5)) + i);
@@ -38,7 +38,7 @@ public class StainedWood extends Block {
 	
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int par1, CreativeTabs creativeTabs, List list) {
-		for (int var4 = 0; var4 < 16; ++var4) {
+		for (int var4 = 0; var4 < 10; ++var4) {
 			list.add(new ItemStack(par1, 1, var4));
 		}
 	}
