@@ -60,10 +60,10 @@ public class Silvania {
     
     //Items - IDs 17300+
 	public final static Item silvaniaLogoItem = new SilvaniaLogoItem(17300).setUnlocalizedName("silvaniaLogoItem");
-	public final static Item poisonedBread = new PoisonedBread(17301).setUnlocalizedName("poisonedBread");
-	public final static Item poisonedSteak = new PoisonedSteak(17302).setUnlocalizedName("poisonedSteak");
-	public final static Item poisonedChicken = new PoisonedChicken(17303).setUnlocalizedName("poisonedChicken");
-	public final static Item poisonedPorkchop = new PoisonedPorkChop(17304).setUnlocalizedName("poisonedPorkchop");
+	//public final static Item poisonedBread = new PoisonedBread(17301).setUnlocalizedName("poisonedBread");
+	//public final static Item poisonedSteak = new PoisonedSteak(17302).setUnlocalizedName("poisonedSteak");
+	//public final static Item poisonedChicken = new PoisonedChicken(17303).setUnlocalizedName("poisonedChicken");
+	//public final static Item poisonedPorkchop = new PoisonedPorkChop(17304).setUnlocalizedName("poisonedPorkchop");
     
     @Init
     public void load(FMLInitializationEvent event) {
@@ -140,10 +140,10 @@ public class Silvania {
             
             //Items
             GameRegistry.registerItem(silvaniaLogoItem, "silvaniaLogoItem");
-            GameRegistry.registerItem(poisonedBread, "poisonedBread");
-            GameRegistry.registerItem(poisonedSteak, "poisonedSteak");
-            GameRegistry.registerItem(poisonedChicken, "poisonedChicken");
-            GameRegistry.registerItem(poisonedPorkchop, "poisonedPorkchop");
+            //GameRegistry.registerItem(poisonedBread, "poisonedBread");
+            //GameRegistry.registerItem(poisonedSteak, "poisonedSteak");
+            //GameRegistry.registerItem(poisonedChicken, "poisonedChicken");
+            //GameRegistry.registerItem(poisonedPorkchop, "poisonedPorkchop");
             LanguageRegistry.addName(silvaniaLogoItem, "Silvania");
 
             //Other
