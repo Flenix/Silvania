@@ -64,6 +64,7 @@ public class Silvania {
 	//public final static Item poisonedSteak = new PoisonedSteak(17302).setUnlocalizedName("poisonedSteak");
 	//public final static Item poisonedChicken = new PoisonedChicken(17303).setUnlocalizedName("poisonedChicken");
 	//public final static Item poisonedPorkchop = new PoisonedPorkChop(17304).setUnlocalizedName("poisonedPorkchop");
+	public final static Item musicSkinAndBones = new MusicSkinAndBones(17305, "Xylexia", "Skin & Bones").setUnlocalizedName("musicSkinAndBones");
     
     @Init
     public void load(FMLInitializationEvent event) {
@@ -144,7 +145,10 @@ public class Silvania {
             //GameRegistry.registerItem(poisonedSteak, "poisonedSteak");
             //GameRegistry.registerItem(poisonedChicken, "poisonedChicken");
             //GameRegistry.registerItem(poisonedPorkchop, "poisonedPorkchop");
+            GameRegistry.registerItem(musicSkinAndBones, "musicSkinAndBones");
+            
             LanguageRegistry.addName(silvaniaLogoItem, "Silvania");
+            LanguageRegistry.addName(musicSkinAndBones, "Skin & Bones");
 
             //Other
             LanguageRegistry.instance().addStringLocalization("itemGroup.tabSilvania", "en_US", "Silvania");
