@@ -47,23 +47,22 @@ public class Silvania {
 
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
+    	MinecraftForge.EVENT_BUS.register(new SoundRegistry());
 
     }
+
     //Blocks - ID 2280 - 2470
     public final static Block rpDecorBlocks = new RPDecorBlocks(215).setUnlocalizedName("rpDecorBlocks");
     public final static Block rpInvertedLightBlocks = new RPLightBlocks(758, true).setUnlocalizedName("rpLightBlocks");
     public final static Block rpLightBlocks = new RPLightBlocks(759, false).setUnlocalizedName("rpLightBlocksOff");
     public final static Block stainedWood = new StainedWood(2280).setUnlocalizedName("stainedWood");
     
-    
-    //Liquids
-    
     //Items - IDs 17300+
 	public final static Item silvaniaLogoItem = new SilvaniaLogoItem(17300).setUnlocalizedName("silvaniaLogoItem");
-	//public final static Item poisonedBread = new PoisonedBread(17301).setUnlocalizedName("poisonedBread");
-	//public final static Item poisonedSteak = new PoisonedSteak(17302).setUnlocalizedName("poisonedSteak");
-	//public final static Item poisonedChicken = new PoisonedChicken(17303).setUnlocalizedName("poisonedChicken");
-	//public final static Item poisonedPorkchop = new PoisonedPorkChop(17304).setUnlocalizedName("poisonedPorkchop");
+	public final static Item poisonedBread = new PoisonedFood(17301, 0, 0.0F, false).setUnlocalizedName("poisonedBread");
+	public final static Item poisonedSteak = new PoisonedFood(17302, 0, 0.0F, false).setUnlocalizedName("poisonedSteak");
+	public final static Item poisonedChicken = new PoisonedFood(17303, 0, 0.0F, false).setUnlocalizedName("poisonedChicken");
+	public final static Item poisonedPorkchop = new PoisonedFood(17304, 0, 0.0F, false).setUnlocalizedName("poisonedPorkchop");
 	public final static Item musicSkinAndBones = new MusicSkinAndBones(17305, "Xylexia", "Skin & Bones").setUnlocalizedName("musicSkinAndBones");
     
     @Init
@@ -141,14 +140,18 @@ public class Silvania {
             
             //Items
             GameRegistry.registerItem(silvaniaLogoItem, "silvaniaLogoItem");
-            //GameRegistry.registerItem(poisonedBread, "poisonedBread");
-            //GameRegistry.registerItem(poisonedSteak, "poisonedSteak");
-            //GameRegistry.registerItem(poisonedChicken, "poisonedChicken");
-            //GameRegistry.registerItem(poisonedPorkchop, "poisonedPorkchop");
+            GameRegistry.registerItem(poisonedBread, "poisonedBread");
+            GameRegistry.registerItem(poisonedSteak, "poisonedSteak");
+            GameRegistry.registerItem(poisonedChicken, "poisonedChicken");
+            GameRegistry.registerItem(poisonedPorkchop, "poisonedPorkchop");
             GameRegistry.registerItem(musicSkinAndBones, "musicSkinAndBones");
             
             LanguageRegistry.addName(silvaniaLogoItem, "Silvania");
             LanguageRegistry.addName(musicSkinAndBones, "Skin & Bones");
+            LanguageRegistry.addName(poisonedBread, "Bread");
+            LanguageRegistry.addName(poisonedSteak, "Steak");
+            LanguageRegistry.addName(poisonedChicken, "Chicken");
+            LanguageRegistry.addName(poisonedPorkchop, "Pork Chop");
 
             //Other
             LanguageRegistry.instance().addStringLocalization("itemGroup.tabSilvania", "en_US", "Silvania");
